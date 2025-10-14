@@ -1,0 +1,17 @@
+image: gitpod/workspace-full:latest
+
+tasks:
+  - init: |
+      echo "💡 Устанавливаем зависимости..."
+      pip install -r requirements.txt
+    command: |
+      echo "🚀 Запуск бота..."
+      python bot.py
+
+ports:
+  - port: 8443
+    onOpen: ignore
+
+vscode:
+  extensions:
+    - ms-python.python
